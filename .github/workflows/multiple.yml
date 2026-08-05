@@ -1,5 +1,5 @@
-name: mutliple job workflow 
-on: workflow-dispatch 
+name: multiple job workflow 
+on: workflow_dispatch
 jobs:
   build:
     run-on: ubuntu-latest 
