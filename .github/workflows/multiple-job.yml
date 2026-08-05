@@ -4,8 +4,8 @@ jobs:
   build:
     run-on: ubuntu-latest
     steps:
-        - name: build stage
-          run: echo "this is build step"
+      - name: build stage
+        run: echo "this is build step"
    test:
       run-on: ubuntu-latest 
       needs: build
