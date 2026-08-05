@@ -1,0 +1,14 @@
+name: actions workflow
+on: push
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout 
+        uses: actions/checkout@v4
+      - name: print the file
+        run: cat index.html
+    
+      
+     
+      
