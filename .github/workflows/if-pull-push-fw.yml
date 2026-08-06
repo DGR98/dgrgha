@@ -14,11 +14,10 @@ jobs:
       - name: build steps 
         run: echo "this is building because pull request triggered"
 
-jobs:
-  deploy:
-  runs-on: ubuntu-latest
-  if: github.event_name == 'pull' | github.ref_name == 'main'
-  steps:
-    - name: deploy steps concurrency
-      run: echo "This is deploying because code is being pushed to the main branch" 
+   deploy:
+   runs-on: ubuntu-latest
+   if: github.event_name == 'pull' | github.ref_name == 'main'
+   steps:
+     - name: deploy steps concurrency
+       run: echo "This is deploying because code is being pushed to the main branch" 
   
