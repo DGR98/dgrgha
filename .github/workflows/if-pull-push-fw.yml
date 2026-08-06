@@ -3,22 +3,22 @@ on:
   push:
     branches:
       - main
-    pull_request:
-      types:
-        - opened
+  pull_request:
+    types:
+      - opened
 jobs:
   build:
-  runs-on: ubuntu-latest
-  if: github.event_name == "pull_request"
-  steps:
-    - name: build steps 
-      run: echo "this is building because pull request triggered"
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: build steps 
+        run: echo "this is building because pull request triggered"
 
 jobs:
   deploy:
   runs-on: ubuntu-latest
-  if: github.event_name == "pull" | github.ref_name == "main"
+  if: github.event_name == 'pull' | github.ref_name == 'main'
   steps:
     - name: deploy steps concurrency
-      run: echo "this is deploying because code is being pushed to the main branch" 
+      run: echo "This is deploying because code is being pushed to the main branch" 
   
