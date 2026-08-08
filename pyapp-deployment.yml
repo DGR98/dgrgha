@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: kammana/gha-pyapp:7005ac2
+          image: kammana/gha-pyapp:6818643
           ports:
             - containerPort: 8000
