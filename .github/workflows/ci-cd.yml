@@ -32,11 +32,11 @@ jobs:
           # Short commit hash
           SHORT_SHA=${GITHUB_SHA::7}
           # Update image tag in deployment.yaml
-          yq -i '.spec.template.spec.containers[0].image = "gautham1999/gha-pyapp:'"$SHORT_SHA"'"' /pyapp-deployment.yml
+          yq -i '.spec.template.spec.containers[0].image = "gautham1999/gha-pyapp:'"$SHORT_SHA"'"pyapp-deployment.yml
       - name: Commit deployment file changes
         run: |
             git config user.name "github-actions[bot]"
             git config user.email "github-actions@noreply"
-            git add /pyapp-deployment.yml
+            git add pyapp-deployment.yml
             git commit -m 'docker tag updated by GHA' || echo "Already commited changes"
             git push origin main
