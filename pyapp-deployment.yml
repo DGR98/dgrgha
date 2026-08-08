@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: gautham1999/gha-pyapp:995dbb5
+          image: gautham1999/gha-pyapp:7a130d7
           ports:
-           # this port is used for application 
+            # this port is used for application 
             - containerPort: 8000
-          # this port is used for metric monitoring  
-            - containerPort: 9090 
+              # this port is used for metric monitoring  
+            - containerPort: 9090
